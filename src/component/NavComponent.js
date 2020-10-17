@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
