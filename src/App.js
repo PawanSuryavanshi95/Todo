@@ -1,21 +1,24 @@
 import React from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import NavComponent from './component/NavComponent'
 import Todos from './component/Todos';
 import AddTodo from './component/AddTodo';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
+  const { isAuthenticated} = useAuth0();
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Todo App</NavbarBrand>
-        </Navbar>
+        <NavComponent/>
       </header>
-      <main>
-        <AddTodo/>
-        <Todos/>
-      </main>
+        {isAuthenticated?
+          <main>
+            <AddTodo/>
+            <Todos/>
+          </main> :
+          <main>
+            <h3>You have to login to use this service</h3>
+          </main>}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 const initState = {
     todos: [
-        {id:1, task:"I need to complete this app."},
-        {id:2, task:"Study for FQI quiz."},
-        {id:3, task:"Study Signal and Systems."},
+        {id:1, task:"Task 1 is here"},
+        {id:2, task:"Task 2 lorem ispsum"},
+        {id:3, task:"Task 3 to do, last task"},
     ]
 }
 

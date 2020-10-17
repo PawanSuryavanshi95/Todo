@@ -6,13 +6,19 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer';
+import { BrowserRouter as Router } from "react-router-dom";
+import Auth0ProviderWithHistory from './auth0-provider-with-history';
 
 const store = createStore(rootReducer);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store} > <App /> </Provider>
-  </React.StrictMode>,
+  <Router>
+    <Auth0ProviderWithHistory>
+      <Provider store={store}>
+      <App />
+      </Provider>
+    </Auth0ProviderWithHistory>
+  </Router>,
   document.getElementById('root')
 );
 
