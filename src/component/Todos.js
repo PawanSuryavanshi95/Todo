@@ -1,48 +1,58 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Alert, Button, Card, CardBody, CardTitle } from 'reactstrap';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Alert, Button, Card, CardBody, CardTitle } from "reactstrap";
+import { connect } from "react-redux";
 
 class Todos extends Component {
+  handleClick = (e, id) => {
+    e.preventDefault();
+    this.props.deleteTask(id);
+  };
 
-    handleClick = (e,id) => {
-        e.preventDefault();
-        this.props.deleteTask(id);
-    }
+  render() {
+    var key = 1;
+    const todos = this.props.todos.map((todo) => {
+      return (
+        <Alert key={key++} color="secondary">
+          {" "}
+          {todo.task}{" "}
+          <Button
+            onClick={(e) => {
+              this.handleClick(e, todo.id);
+            }}
+          >
+            X
+          </Button>
+        </Alert>
+      );
+    });
+    return (
+      <div>
+        <Card>
+          <CardBody>
+            <CardTitle>Todos</CardTitle>
+            {todos}
+                    <h2>Make your work easy and unforgottenable, if that is a word</h2>
+          </CardBody>
+        </Card>
+      </div>
+    );
+  }
 
-    render(){
-        var key=1;
-        const todos = this.props.todos.map(todo => {
-            return <Alert key={key++}  color="secondary"> {todo.task} <Button onClick={(e)=>{ this.handleClick(e,todo.id) }}>X</Button></Alert>
-        });
-        return(
-            <div>
-                
-                <Card>
-                <CardBody>
-                <CardTitle>Todos</CardTitle>
-                    {todos}
-                    <h1> East or west Satyam is best</h1>
-                    <p>This code is written by Pawan but pushed by me
-                        <br>hi bro</br>
-                    </p>
-                </CardBody>
-                </Card>
-            </div>
-        )
-    }
 }
 
 const getPropsFromState = (state) => {
-    return {
-        todos: state.todos,
-    }
-}
+  return {
+    todos: state.todos,
+  };
+};
 
 const getDispatchFunctions = (dispatch) => {
-    return {
-        deleteTask: (id) => { dispatch({ type:"DELETE_TASK", id:id }) },
-    }
-}
+  return {
+    deleteTask: (id) => {
+      dispatch({ type: "DELETE_TASK", id: id });
+    },
+  };
+};
 
 export default connect(getPropsFromState, getDispatchFunctions)(Todos);
