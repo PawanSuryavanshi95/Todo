@@ -29,8 +29,8 @@ class AddTodo extends Component {
     render(){
         return(
             <div className="d-flex">
-                <input className="form-control mr-1" onChange={this.handleChange}/>
-                <button className="btn btn-primary" onClick={this.handleClick}>Add</button>
+                <textarea className="form-control mr-1" onChange={this.handleChange}/>
+                <button className="btnAdd btn btn-primary" onClick={this.handleClick}>Add</button>
             </div>
         )
     }

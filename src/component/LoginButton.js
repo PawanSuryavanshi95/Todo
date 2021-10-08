@@ -8,8 +8,8 @@ const LoginButton = () => {
       className="btn btn-primary btn-block"
       onClick={(e) =>{  loginWithRedirect();}}
     >
-      Log In
-    </button>
+      sign In </button>
+    
   );
 };
 
