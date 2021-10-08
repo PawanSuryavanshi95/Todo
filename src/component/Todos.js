@@ -17,9 +17,10 @@ class Todos extends Component {
         });
         return(
             <div>
+                <h1>East or best ravi hai best</h1>
                 <Card>
                 <CardBody>
-                <CardTitle>Todos</CardTitle>
+                <CardTitle>Todos:the best app</CardTitle>
                     {todos}
                 </CardBody>
                 </Card>
