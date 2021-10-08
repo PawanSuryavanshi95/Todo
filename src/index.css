@@ -1,7 +1,8 @@
 main {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 39px;
+    
 }
 
 .d-flex input {
