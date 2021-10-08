@@ -17,10 +17,15 @@ class Todos extends Component {
         });
         return(
             <div>
+                
                 <Card>
                 <CardBody>
                 <CardTitle>Todos</CardTitle>
                     {todos}
+                    <h1> East or west Satyam is best</h1>
+                    <p>This code is written by Pawan but pushed by me
+                        <br>hi bro</br>
+                    </p>
                 </CardBody>
                 </Card>
             </div>
