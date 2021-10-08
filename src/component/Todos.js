@@ -38,6 +38,7 @@ class Todos extends Component {
       </div>
     );
   }
+
 }
 
 const getPropsFromState = (state) => {

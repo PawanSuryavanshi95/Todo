@@ -8,8 +8,8 @@ const LogoutButton = () => {
       className="btn btn-danger btn-block"
       onClick={(e) =>{  logout();}}
     >
-      Log Out
-    </button>
+      Sign Out</button>
+    
   );
 };
 
