@@ -7,3 +7,7 @@ main {
 .d-flex input {
     max-width: 500px;
 }
+
+.btnAdd {
+    width: 200px;
+}
