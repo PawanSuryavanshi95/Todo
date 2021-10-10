@@ -1,9 +1,9 @@
 main {
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 45px;
 }
 
 .d-flex input {
-    max-width: 500px;
+    max-width: 510px;
 }
