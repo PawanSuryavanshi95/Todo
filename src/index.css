@@ -12,3 +12,8 @@ main {
 .btnAdd {
     width: 200px;
 }
+
+.btn-secondary {
+    color: red;
+    background-color: red;
+}

@@ -17,7 +17,7 @@ function App() {
             <Todos/>
           </main> :
           <main>
-            <h3>You have to login to use this service</h3>
+            <h3>Please login to use this service</h3>
           </main>}
     </div>
   );
