@@ -1,12 +1,12 @@
 main {
     display: flex;
     flex-direction: column;
-    margin: 39px;
+    margin: 40px;
     
 }
 
 .d-flex input {
-    max-width: 500px;
+    max-width: 550px;
 }
 
 .btnAdd {
