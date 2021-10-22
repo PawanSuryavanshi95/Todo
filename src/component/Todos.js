@@ -32,7 +32,6 @@ class Todos extends Component {
           <CardBody>
             <CardTitle>Todos</CardTitle>
             {todos}
-                    <h2>Make your work easy and unforgottenable, if that is a word</h2>
           </CardBody>
         </Card>
       </div>
